@@ -67,9 +67,9 @@ createReleaseJar {
 
 addon {
     addonInfo {
-        id("example")
-        displayName("Example Addon")
-        author("Example Author")
+        id("customblockoverlay")
+        displayName("CustomBlockOverlay")
+        author("LabyMod")
         version(System.getenv().getOrDefault("VERSION", "0.0.0"))
     }
 
