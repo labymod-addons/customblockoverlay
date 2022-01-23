@@ -73,5 +73,10 @@ addon {
         version(System.getenv().getOrDefault("VERSION", "0.0.0"))
     }
 
+    dev {
+        releaseChannel = "feature-customblockoverlay"
+        commitReference = "unknown"
+    }
+
     internalRelease()
 }
