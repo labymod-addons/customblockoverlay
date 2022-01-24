@@ -2,6 +2,7 @@ package net.labymod.addons.customblockoverlay;
 
 import com.google.inject.Singleton;
 import javax.inject.Inject;
+import net.labymod.addons.customblockoverlay.listener.RenderBlockSelectionBoxListener;
 import net.labymod.api.LabyAPI;
 import net.labymod.api.configuration.loader.ConfigurationLoader;
 import net.labymod.api.configuration.settings.SettingsRegistry;
@@ -26,6 +27,8 @@ public class CustomBlockOverlay {
   private CustomBlockOverlay(LabyAPI labyAPI, SettingCategoryRegistry categoryRegistry) {
     this.labyAPI = labyAPI;
     this.categoryRegistry = categoryRegistry;
+
+    labyAPI.getEventBus().registerListener(this, RenderBlockSelectionBoxListener.class);
   }
 
   /**
