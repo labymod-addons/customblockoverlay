@@ -1,6 +1,8 @@
 package net.labymod.addons.customblockoverlay;
 
 import com.google.inject.Singleton;
+import java.awt.*;
+import net.labymod.addons.customblockoverlay.colorpicker.NewColorPickerWidget.ColorPicker;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.color.ColorPickerWidget.ColorPickerSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
@@ -16,6 +18,9 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
 
   @ColorPickerSetting
   private int lineColor;
+
+  @ColorPicker
+  private Color overlayColor = Color.BLACK;
 
   @Override
   public boolean isEnabled() {

@@ -1,0 +1,77 @@
+ColorPickerOverlay {
+  background-color: rgba(20, 20, 20, 150);
+}
+
+.color-selector {
+  width: 100;
+  height: fit-content;
+  gradient-width: 64;
+
+  TextField {
+    height: 18;
+    width: 33;
+  }
+
+  Gradient {
+  width: 64;
+  height: 20;
+  }
+}
+
+  .red-selector {
+    field-position: right;
+    top: 20;
+    right: 2;
+  }
+
+  .green-selector {
+    field-position: right;
+    top: 60;
+    right: 2;
+  }
+
+  .blue-selector {
+    field-position: right;
+    top: 100;
+    right: 2;
+  }
+
+  .alpha-selector {
+    field-position: right;
+  }
+
+  .hue-selector {
+    field-position: left;
+  }
+
+  .saturation-selector {
+    field-position: left;
+  }
+
+  .brightness-selector {
+    field-position: left;
+  }
+
+
+.color-picker {
+  background-color: rgba(20, 20, 20, 150);
+  left: 50%;
+  alignment-x: center;
+  top: 50%;
+  alignment-y: center;
+  width: 95%;
+  height: 200;
+}
+
+.color-picker-title {
+  top: 0;
+  left: 50%;
+  alignment-x: center;
+}
+
+.selector-list {
+  top: 0;
+  width: fit-content;
+  height: 22;
+  space-between-entries: 3;
+}

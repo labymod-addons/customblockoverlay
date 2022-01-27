@@ -2,6 +2,7 @@ package net.labymod.addons.customblockoverlay;
 
 import com.google.inject.Singleton;
 import javax.inject.Inject;
+import net.labymod.addons.customblockoverlay.colorpicker.NewColorPickerWidget;
 import net.labymod.addons.customblockoverlay.listener.RenderBlockSelectionBoxListener;
 import net.labymod.api.LabyAPI;
 import net.labymod.api.configuration.loader.ConfigurationLoader;
@@ -42,15 +43,31 @@ public class CustomBlockOverlay {
       return;
     }
 
+    this.labyAPI.getWidgetRegistry().register(NewColorPickerWidget.class);
+
     ConfigurationLoader configurationLoader = this.labyAPI.getConfigurationLoader();
     try {
       this.configuration = configurationLoader.load(CustomBlockOverlayConfiguration.class);
       SettingsRegistry registry = this.configuration.initializeRegistry();
-      this.categoryRegistry.register("nametags.settings", registry);
+      this.categoryRegistry.register("customblockoverlay.settings", registry);
     } catch (Exception e) {
       e.printStackTrace();
     }
+
   }
+
+/*  @Subscribe
+  public void onSettingWidgetInitialize(SettingWidgetInitializeEvent event) {
+    if (!event.getLayer().getId().equals("customblockoverlay.settings")) {
+      return;
+    }
+
+    ColorPickerWidget colorPickerWidget = new ColorPickerWidget(true, value -> {
+      System.out.println(value.getRGB());
+    });
+    event.getSettings().add(colorPickerWidget);
+  } */
+
 
   /**
    * On configuration save.
