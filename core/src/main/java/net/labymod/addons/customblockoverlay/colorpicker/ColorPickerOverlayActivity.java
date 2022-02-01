@@ -3,6 +3,7 @@ package net.labymod.addons.customblockoverlay.colorpicker;
 import net.labymod.addons.customblockoverlay.colorpicker.selector.BlueSelectorWidget;
 import net.labymod.addons.customblockoverlay.colorpicker.selector.GreenSelectorWidget;
 import net.labymod.addons.customblockoverlay.colorpicker.selector.RedSelectorWidget;
+import net.labymod.addons.customblockoverlay.colorpicker.selector.WholeSelectorWidget;
 import net.labymod.api.client.gui.screen.Parent;
 import net.labymod.api.client.gui.screen.activity.types.SimpleActivity;
 import net.labymod.api.client.gui.screen.key.MouseButton;
@@ -37,6 +38,8 @@ public class ColorPickerOverlayActivity extends SimpleActivity {
     colorPicker.addChild(greenWidget);
     ColorSelectorWidget blueWidget = new BlueSelectorWidget(this.color);
     colorPicker.addChild(blueWidget);
+    ColorSelectorWidget wholeWidget = new WholeSelectorWidget(this.color);
+    colorPicker.addChild(wholeWidget);
 
     this.getDocument().addChild(colorPicker);
   }

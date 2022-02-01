@@ -94,10 +94,14 @@ public class ColorPickerColor {
   }
 
   public void setRgb() {
-    this.rgb = Color.HSBtoRGB(this.hue, this.saturation, this.brightness);
+    this.rgb = this.hsbToRgb(this.hue, this.saturation, this.brightness);
   }
 
-  private int[] rgbToHsb(int rgb) {
+  public int hsbToRgb(int hue, int saturation, int brightness) {
+    return Color.HSBtoRGB(hue, saturation, brightness);
+  }
+
+  public int[] rgbToHsb(int rgb) {
     float red = ((rgb & 0xff0000) >> 16) / 255F;
     float green = ((rgb & 0x00ff00) >> 8) / 255F;
     float blue = (rgb & 0x0000ff) / 255F;

@@ -18,6 +18,16 @@ ColorPickerOverlay {
   }
 }
 
+  .whole-selector {
+    field-position: right;
+    top: 20;
+    left: 2;
+  Gradient {
+  width: 200;
+  height: 100;
+  }
+  }
+
   .red-selector {
     field-position: right;
     top: 20;

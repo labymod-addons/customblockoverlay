@@ -44,7 +44,7 @@ public class NewColorPickerWidget extends HorizontalListWidget {
 
   @Override
   public float getContentWidth(BoundsType type) {
-    return Math.max(20.0F, super.getContentWidth(type));
+    return Math.max(40.0F, super.getContentWidth(type));
   }
 
   @Override
