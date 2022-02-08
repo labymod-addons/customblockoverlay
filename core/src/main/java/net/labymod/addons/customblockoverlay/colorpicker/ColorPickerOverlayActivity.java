@@ -1,9 +1,7 @@
 package net.labymod.addons.customblockoverlay.colorpicker;
 
-import net.labymod.addons.customblockoverlay.colorpicker.selector.BlueSelectorWidget;
-import net.labymod.addons.customblockoverlay.colorpicker.selector.GreenSelectorWidget;
-import net.labymod.addons.customblockoverlay.colorpicker.selector.RedSelectorWidget;
-import net.labymod.addons.customblockoverlay.colorpicker.selector.WholeSelectorWidget;
+import net.labymod.addons.customblockoverlay.colorpicker.selector.HueSelectorWidget;
+import net.labymod.addons.customblockoverlay.colorpicker.selector.ShadeSelectorWidget;
 import net.labymod.api.client.gui.screen.Parent;
 import net.labymod.api.client.gui.screen.activity.types.SimpleActivity;
 import net.labymod.api.client.gui.screen.key.MouseButton;
@@ -15,10 +13,13 @@ public class ColorPickerOverlayActivity extends SimpleActivity {
 
   private final ColorPickerColor color;
   private final boolean displayAlpha;
+  private final boolean displayChroma;
 
-  public ColorPickerOverlayActivity(ColorPickerColor color, boolean displayAlpha) {
+  public ColorPickerOverlayActivity(ColorPickerColor color, boolean displayAlpha,
+                                    boolean displayChroma) {
     this.color = color;
     this.displayAlpha = displayAlpha;
+    this.displayChroma = displayChroma;
   }
 
   @Override
@@ -32,14 +33,10 @@ public class ColorPickerOverlayActivity extends SimpleActivity {
     title.addId("color-picker-title");
     colorPicker.addChild(title);
 
-    ColorSelectorWidget redWidget = new RedSelectorWidget(this.color);
-    colorPicker.addChild(redWidget);
-    ColorSelectorWidget greenWidget = new GreenSelectorWidget(this.color);
-    colorPicker.addChild(greenWidget);
-    ColorSelectorWidget blueWidget = new BlueSelectorWidget(this.color);
-    colorPicker.addChild(blueWidget);
-    ColorSelectorWidget wholeWidget = new WholeSelectorWidget(this.color);
-    colorPicker.addChild(wholeWidget);
+    ShadeSelectorWidget shadeSelector = new ShadeSelectorWidget(this.color);
+    colorPicker.addChild(shadeSelector);
+    HueSelectorWidget hueSelector = new HueSelectorWidget(this.color);
+    colorPicker.addChild(hueSelector);
 
     this.getDocument().addChild(colorPicker);
   }
@@ -51,6 +48,6 @@ public class ColorPickerOverlayActivity extends SimpleActivity {
 
   @Override
   public boolean mouseClicked(int mouseX, int mouseY, MouseButton mouseButton) {
-    return false;
+    return super.mouseClicked(mouseX, mouseY, mouseButton);
   }
 }

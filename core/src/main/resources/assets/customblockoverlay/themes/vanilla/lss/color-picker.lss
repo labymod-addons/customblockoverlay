@@ -2,6 +2,35 @@ ColorPickerOverlay {
   background-color: rgba(20, 20, 20, 150);
 }
 
+Marker {
+  left: 0;
+  bottom: 0;
+}
+
+ShadeSelector {
+  width: 150;
+  height: 100;
+  top: 20;
+  left: 20;
+
+  Marker {
+    height: 10;
+    width: 10;
+  }
+}
+
+HueSelector {
+  width: 150;
+  height: 20;
+  top: 130;
+  left: 20;
+
+  Marker {
+    height: 6;
+    width: 6;
+  }
+}
+
 .color-selector {
   width: 100;
   height: fit-content;

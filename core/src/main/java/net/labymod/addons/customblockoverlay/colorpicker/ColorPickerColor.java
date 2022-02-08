@@ -18,7 +18,11 @@ public class ColorPickerColor {
     return new ColorPickerColor(rgb);
   }
 
-  protected static ColorPickerColor of(short red, short green, short blue, short alpha) {
+  protected static ColorPickerColor of(Color color) {
+    return of(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
+  }
+
+  protected static ColorPickerColor of(int red, int green, int blue, int alpha) {
     return new ColorPickerColor(
         (alpha & 255) << 24 | (red & 255) << 16 | (green & 255) << 8 | (blue & 255));
   }

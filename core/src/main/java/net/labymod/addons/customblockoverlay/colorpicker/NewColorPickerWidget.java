@@ -20,12 +20,14 @@ import net.labymod.api.configuration.settings.widget.WidgetFactory;
 public class NewColorPickerWidget extends HorizontalListWidget {
 
   private final boolean displayAlpha;
+  private final boolean displayChroma;
   private final ColorPickerColor color;
   private final Consumer<Color> callback;
 
-  public NewColorPickerWidget(boolean displayAlpha, ColorPickerColor color,
+  public NewColorPickerWidget(boolean displayAlpha, boolean displayChroma, ColorPickerColor color,
       Consumer<Color> callback) {
     this.displayAlpha = displayAlpha;
+    this.displayChroma = displayChroma;
     this.color = color;
     this.callback = callback;
     this.setPressable(this::openOverlay);
@@ -38,7 +40,7 @@ public class NewColorPickerWidget extends HorizontalListWidget {
     screenRendererWidget.getBounds().setHeight(document.getBounds().getHeight());
     screenRendererWidget.getBounds().setWidth(document.getBounds().getWidth());
     screenRendererWidget.displayScreen(
-        new ColorPickerOverlayActivity(this.color, this.displayAlpha));
+        new ColorPickerOverlayActivity(this.color, this.displayAlpha, this.displayChroma));
     document.addChild(screenRendererWidget);
   }
 
@@ -57,7 +59,9 @@ public class NewColorPickerWidget extends HorizontalListWidget {
   @Retention(RetentionPolicy.RUNTIME)
   public @interface ColorPicker {
 
-    boolean alpha() default true;
+    boolean alpha() default false;
+
+    boolean chroma() default false;
   }
 
   @SettingFactory
@@ -68,7 +72,7 @@ public class NewColorPickerWidget extends HorizontalListWidget {
 
     public NewColorPickerWidget create(ColorPicker annotation, SettingAccessor accessor) {
       NewColorPickerWidget widget = new NewColorPickerWidget(annotation.alpha(),
-          ColorPickerColor.of(((Color) accessor.get()).getRGB()), accessor::set);
+          annotation.chroma(), ColorPickerColor.of(accessor.get()), accessor::set);
       widget.backgroundColor = widget.color.getRgb() | -16777216;
       return widget;
     }
