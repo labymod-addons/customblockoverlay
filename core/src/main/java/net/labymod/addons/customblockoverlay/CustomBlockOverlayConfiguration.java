@@ -14,16 +14,37 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
   @SwitchSetting
   private boolean enabled;
 
+  @SwitchSetting
+  private boolean lineEnabled;
+
   @ColorPickerSetting
   private int lineColor;
+
+  @SwitchSetting
+  private boolean overlayEnabled;
+
+  @ColorPickerSetting
+  private int overlayColor;
 
   @Override
   public boolean isEnabled() {
     return this.enabled;
   }
 
+  public boolean isLineEnabled() {
+    return this.lineEnabled;
+  }
+
   public int getLineColor() {
     return this.lineColor;
+  }
+
+  public boolean isOverlayEnabled() {
+    return this.overlayEnabled;
+  }
+
+  public int getOverlayColor() {
+    return this.overlayColor;
   }
 }
 

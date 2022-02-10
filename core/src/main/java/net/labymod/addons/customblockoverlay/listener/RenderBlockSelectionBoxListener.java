@@ -22,6 +22,16 @@ public class RenderBlockSelectionBoxListener {
       return;
     }
 
-    event.setLineColor(new Color(this.configuration.getLineColor()));
+    if (this.configuration.isLineEnabled()) {
+      Color color = new Color(this.configuration.getLineColor());
+      event.setLineColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), 104));
+    } else {
+      event.setLineColor(null);
+    }
+
+    if (this.configuration.isOverlayEnabled()) {
+      Color color = new Color(this.configuration.getOverlayColor());
+      event.setOverlayColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), 104));
+    }
   }
 }
