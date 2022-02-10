@@ -1,6 +1,7 @@
 package net.labymod.addons.customblockoverlay;
 
 import com.google.inject.Singleton;
+import java.awt.*;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.color.ColorPickerWidget.ColorPickerSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
@@ -12,19 +13,19 @@ import net.labymod.api.configuration.loader.impl.AddonConfig;
 public final class CustomBlockOverlayConfiguration extends AddonConfig {
 
   @SwitchSetting
-  private boolean enabled;
+  private boolean enabled = true;
 
   @SwitchSetting
-  private boolean lineEnabled;
+  private boolean lineEnabled = true;
 
   @ColorPickerSetting
-  private int lineColor;
+  private int lineColor = Color.ORANGE.getRGB();
 
   @SwitchSetting
-  private boolean overlayEnabled;
+  private boolean overlayEnabled = false;
 
   @ColorPickerSetting
-  private int overlayColor;
+  private int overlayColor = Color.PINK.getRGB();
 
   @Override
   public boolean isEnabled() {
