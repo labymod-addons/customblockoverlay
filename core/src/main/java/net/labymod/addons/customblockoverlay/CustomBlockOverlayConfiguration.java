@@ -1,16 +1,14 @@
 package net.labymod.addons.customblockoverlay;
 
-import com.google.inject.Singleton;
 import java.awt.*;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.color.ColorPickerWidget.ColorPickerSetting;
+import net.labymod.api.configuration.loader.Config;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
-import net.labymod.api.configuration.loader.impl.AddonConfig;
 
 @SuppressWarnings("FieldMayBeFinal")
-@Singleton
 @ConfigName("settings")
-public final class CustomBlockOverlayConfiguration extends AddonConfig {
+public final class CustomBlockOverlayConfiguration extends Config {
 
   @SwitchSetting
   private boolean enabled = true;
@@ -18,16 +16,15 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
   @SwitchSetting
   private boolean lineEnabled = true;
 
-  @ColorPickerSetting
-  private int lineColor = Color.ORANGE.getRGB();
+  @ColorPickerSetting(alpha = true)
+  private int lineColor = new Color(117, 0, 10, 170).getRGB();
 
   @SwitchSetting
-  private boolean overlayEnabled = false;
+  private boolean overlayEnabled = true;
 
-  @ColorPickerSetting
-  private int overlayColor = Color.PINK.getRGB();
+  @ColorPickerSetting(alpha = true)
+  private int overlayColor = new Color(9, 58, 142, 170).getRGB();
 
-  @Override
   public boolean isEnabled() {
     return this.enabled;
   }

@@ -27,7 +27,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("net.labymod.gradle", "addon", "0.1.34")
+        classpath("net.labymod.gradle", "addon", "0.2.28")
     }
 }
 
@@ -67,16 +67,14 @@ createReleaseJar {
 
 addon {
     addonInfo {
-        id("customblockoverlay")
+        namespace("customblockoverlay")
         displayName("CustomBlockOverlay")
-        author("LabyMod")
+        author("LabyMedia GmbH")
         version(System.getenv().getOrDefault("VERSION", "0.0.0"))
     }
 
     dev {
-        releaseChannel = "feature-customblockoverlay"
+        releaseChannel = "improvement-addon-api"
         commitReference = "unknown"
     }
-
-    internalRelease()
 }

@@ -9,6 +9,7 @@ val minecraftGameVersion: String = "1.8.9"
 val minecraftVersionTag: String = "1.8"
 
 dependencies {
+    annotationProcessor("net.labymod:sponge-mixin:0.1.0+0.11.2+mixin.0.8.5")
     labyProcessor()
     labyApi("v1_8")
     api(project(":core"))
@@ -21,6 +22,7 @@ legacyMinecraft {
     args("--tweakClass", "net.labymod.core.loader.vanilla.launchwrapper.LabyModLaunchWrapperTweaker")
     args("--labymod-dev-environment", "true")
     args("--addon-dev-environment", "true")
+    jvmArgs("-Dnet.labymod.running-version=$minecraftGameVersion")
 }
 
 volt {
@@ -29,7 +31,7 @@ volt {
         minVersion = "0.6.6"
     }
 
-    packageName("org.example.addons.v1_8.mixins")
+    packageName("org.example.addon.v1_8.mixins")
 
     version = minecraftGameVersion
 }
