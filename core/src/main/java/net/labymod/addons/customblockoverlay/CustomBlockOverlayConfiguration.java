@@ -23,7 +23,7 @@ public final class CustomBlockOverlayConfiguration extends Config {
   private boolean overlayEnabled = true;
 
   @ColorPickerSetting(alpha = true)
-  private int overlayColor = new Color(9, 58, 142, 170).getRGB();
+  private int overlayColor = new Color(9, 58, 142, 70).getRGB();
 
   public boolean isEnabled() {
     return this.enabled;
