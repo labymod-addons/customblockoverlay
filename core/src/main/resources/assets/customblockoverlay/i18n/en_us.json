@@ -1,14 +1,14 @@
 {
-  "settings": {
-    "customblockoverlay": {
+  "customblockoverlay": {
+    "settings": {
       "name": "CustomBlockOverlay",
       "enabled": {
         "name": "Enabled"
       },
-      "lineEnabled": {
+      "outlineEnabled": {
         "name": "Outline Enabled"
       },
-      "lineColor": {
+      "outlineColor": {
         "name": "Outline Color"
       },
       "overlayEnabled": {

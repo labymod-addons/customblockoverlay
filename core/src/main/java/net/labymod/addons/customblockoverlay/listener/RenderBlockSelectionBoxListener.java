@@ -23,20 +23,20 @@ public class RenderBlockSelectionBoxListener {
   @Subscribe
   public void onRenderBlockSelectionBox(RenderBlockSelectionBoxEvent event) {
     CustomBlockOverlayConfiguration configuration = this.addon.configuration();
-    if (!configuration.isEnabled()) {
+    if (!configuration.enabled().get()) {
       return;
     }
 
-    if (configuration.isLineEnabled()) {
-      this.lineColor = this.getCachedOrNewColor(this.lineColor, configuration.getLineColor());
+    if (configuration.outlineEnabled().get()) {
+      this.lineColor = this.getCachedOrNewColor(this.lineColor, configuration.outlineColor().get());
       event.setLineColor(this.lineColor);
     } else {
       event.setLineColor(null);
     }
 
-    if (configuration.isOverlayEnabled()) {
+    if (configuration.overlayEnabled().get()) {
       this.overlayColor = this.getCachedOrNewColor(this.overlayColor,
-          configuration.getOverlayColor());
+          configuration.overlayColor().get());
       event.setOverlayColor(this.overlayColor);
     }
   }
