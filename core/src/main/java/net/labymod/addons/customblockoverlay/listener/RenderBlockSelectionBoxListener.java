@@ -44,7 +44,8 @@ public class RenderBlockSelectionBoxListener {
     }
 
     if (configuration.outlineEnabled().get()) {
-      this.lineColor = this.getCachedOrNewColor(this.lineColor, configuration.outlineColor().get());
+      this.lineColor = this.getCachedOrNewColor(this.lineColor,
+          configuration.outlineColor().get().get());
       event.setLineColor(this.lineColor);
     } else {
       event.setLineColor(null);
@@ -52,7 +53,7 @@ public class RenderBlockSelectionBoxListener {
 
     if (configuration.overlayEnabled().get()) {
       this.overlayColor = this.getCachedOrNewColor(this.overlayColor,
-          configuration.overlayColor().get());
+          configuration.overlayColor().get().get());
       event.setOverlayColor(this.overlayColor);
     }
   }

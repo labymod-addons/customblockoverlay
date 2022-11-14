@@ -16,12 +16,12 @@
 
 package net.labymod.addons.customblockoverlay;
 
-import java.awt.*;
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.color.ColorPickerWidget.ColorPickerSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
+import net.labymod.api.util.Color;
 
 @SuppressWarnings("FieldMayBeFinal")
 @ConfigName("settings")
@@ -33,16 +33,14 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
   @SwitchSetting
   private ConfigProperty<Boolean> outlineEnabled = new ConfigProperty<>(true);
 
-  @ColorPickerSetting(alpha = true)
-  private ConfigProperty<Integer> outlineColor = new ConfigProperty<>(
-      new Color(117, 0, 10, 170).getRGB());
+  @ColorPickerSetting(alpha = true, chroma = true)
+  private ConfigProperty<Color> outlineColor = new ConfigProperty<>(Color.ofRGB(117, 0, 10, 170));
 
   @SwitchSetting
   private ConfigProperty<Boolean> overlayEnabled = new ConfigProperty<>(true);
 
-  @ColorPickerSetting(alpha = true)
-  private ConfigProperty<Integer> overlayColor = new ConfigProperty<>(
-      new Color(9, 58, 142, 70).getRGB());
+  @ColorPickerSetting(alpha = true, chroma = true)
+  private ConfigProperty<Color> overlayColor = new ConfigProperty<>(Color.ofRGB(9, 58, 142, 70));
 
   @Override
   public ConfigProperty<Boolean> enabled() {
@@ -53,7 +51,7 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
     return this.outlineEnabled;
   }
 
-  public ConfigProperty<Integer> outlineColor() {
+  public ConfigProperty<Color> outlineColor() {
     return this.outlineColor;
   }
 
@@ -61,7 +59,7 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
     return this.overlayEnabled;
   }
 
-  public ConfigProperty<Integer> overlayColor() {
+  public ConfigProperty<Color> overlayColor() {
     return this.overlayColor;
   }
 }
