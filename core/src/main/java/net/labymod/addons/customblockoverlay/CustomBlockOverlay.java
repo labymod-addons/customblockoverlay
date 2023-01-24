@@ -16,20 +16,18 @@
 
 package net.labymod.addons.customblockoverlay;
 
-import com.google.inject.Singleton;
 import net.labymod.addons.customblockoverlay.listener.RenderBlockSelectionBoxListener;
 import net.labymod.api.addon.LabyAddon;
-import net.labymod.api.models.addon.annotation.AddonListener;
+import net.labymod.api.models.addon.annotation.AddonMain;
 
-@AddonListener
-@Singleton
+@AddonMain
 public class CustomBlockOverlay extends LabyAddon<CustomBlockOverlayConfiguration> {
 
   @Override
   protected void enable() {
     this.registerSettingCategory();
 
-    this.registerListener(RenderBlockSelectionBoxListener.class);
+    this.registerListener(new RenderBlockSelectionBoxListener(this));
   }
 
   @Override

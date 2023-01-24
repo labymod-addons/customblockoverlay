@@ -18,7 +18,6 @@ package net.labymod.addons.customblockoverlay.listener;
 
 import java.awt.*;
 import java.util.Objects;
-import javax.inject.Inject;
 import net.labymod.addons.customblockoverlay.CustomBlockOverlay;
 import net.labymod.addons.customblockoverlay.CustomBlockOverlayConfiguration;
 import net.labymod.api.event.Subscribe;
@@ -31,7 +30,6 @@ public class RenderBlockSelectionBoxListener {
   private Color lineColor;
   private Color overlayColor;
 
-  @Inject
   public RenderBlockSelectionBoxListener(CustomBlockOverlay addon) {
     this.addon = addon;
   }
