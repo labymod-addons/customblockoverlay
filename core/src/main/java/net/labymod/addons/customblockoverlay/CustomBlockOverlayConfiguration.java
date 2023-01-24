@@ -21,6 +21,7 @@ import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.Switc
 import net.labymod.api.client.gui.screen.widget.widgets.input.color.ColorPickerWidget.ColorPickerSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
+import net.labymod.api.configuration.settings.annotation.SettingRequires;
 import net.labymod.api.util.Color;
 
 @SuppressWarnings("FieldMayBeFinal")
@@ -33,12 +34,14 @@ public final class CustomBlockOverlayConfiguration extends AddonConfig {
   @SwitchSetting
   private ConfigProperty<Boolean> outlineEnabled = new ConfigProperty<>(true);
 
+  @SettingRequires("outlineEnabled")
   @ColorPickerSetting(alpha = true, chroma = true)
   private ConfigProperty<Color> outlineColor = new ConfigProperty<>(Color.ofRGB(117, 0, 10, 170));
 
   @SwitchSetting
   private ConfigProperty<Boolean> overlayEnabled = new ConfigProperty<>(true);
 
+  @SettingRequires("overlayEnabled")
   @ColorPickerSetting(alpha = true, chroma = true)
   private ConfigProperty<Color> overlayColor = new ConfigProperty<>(Color.ofRGB(9, 58, 142, 70));
 

@@ -6,13 +6,13 @@
         "name": "Enabled"
       },
       "outlineEnabled": {
-        "name": "Outline Enabled"
+        "name": "Custom Outline Color"
       },
       "outlineColor": {
         "name": "Outline Color"
       },
       "overlayEnabled": {
-        "name": "Overlay Enabled"
+        "name": "Custom Overlay Color"
       },
       "overlayColor": {
         "name": "Overlay Color"
