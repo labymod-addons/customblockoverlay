@@ -1,1 +1,7 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "Tilpasset Blokkoverlegg"
+        }
+    }
+}
