@@ -1,1 +1,13 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "BrugerdefineretBlokOverlay",
+            "enabled": {
+                "name": "Aktiveret"
+            },
+            "outlineEnabled": {
+                "name": "Brugerdefineret Konturfarve"
+            }
+        }
+    }
+}
