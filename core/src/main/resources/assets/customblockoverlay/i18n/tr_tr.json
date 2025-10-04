@@ -7,6 +7,9 @@
             },
             "overlayEnabled": {
                 "name": "Özel Kaplama Rengi"
+            },
+            "outlineColor": {
+                "name": "Kenar Çizgisi Rengi"
             }
         }
     }
