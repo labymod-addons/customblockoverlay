@@ -10,6 +10,12 @@
             },
             "outlineColor": {
                 "name": "Kenar Çizgisi Rengi"
+            },
+            "outlineEnabled": {
+                "name": "Özelleştirilmiş Kenar Çizgisi Rengi"
+            },
+            "overlayColor": {
+                "name": "Kaplama Rengi"
             }
         }
     }
