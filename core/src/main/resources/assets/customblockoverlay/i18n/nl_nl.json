@@ -1,1 +1,22 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "Aangepaste blokoverlay",
+            "enabled": {
+                "name": "Ingeschakeld"
+            },
+            "outlineEnabled": {
+                "name": "Aangepaste omtrekkleur"
+            },
+            "outlineColor": {
+                "name": "Omtrekkleur"
+            },
+            "overlayEnabled": {
+                "name": "Aangepaste overlaykleur"
+            },
+            "overlayColor": {
+                "name": "Overlaykleur"
+            }
+        }
+    }
+}
