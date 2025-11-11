@@ -7,6 +7,9 @@
             },
             "outlineEnabled": {
                 "name": "Brugerdefineret Konturfarve"
+            },
+            "outlineColor": {
+                "name": "Omkredsfarve"
             }
         }
     }
