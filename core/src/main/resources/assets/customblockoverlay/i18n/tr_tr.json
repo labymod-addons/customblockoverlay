@@ -1,1 +1,13 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "Özelleştirilmiş Blok Kaplaması",
+            "enabled": {
+                "name": "Aktif"
+            },
+            "overlayEnabled": {
+                "name": "Özel Kaplama Rengi"
+            }
+        }
+    }
+}
