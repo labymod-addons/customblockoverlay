@@ -1,1 +1,22 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "CustomBlockOverlay",
+            "enabled": {
+                "name": "Włączone"
+            },
+            "outlineEnabled": {
+                "name": "Niestandardowy Kolor Obrysu"
+            },
+            "outlineColor": {
+                "name": "Kolor Obrysu"
+            },
+            "overlayEnabled": {
+                "name": "Niestandardowy Kolor Nakładki"
+            },
+            "overlayColor": {
+                "name": "Kolor Nakładki"
+            }
+        }
+    }
+}
