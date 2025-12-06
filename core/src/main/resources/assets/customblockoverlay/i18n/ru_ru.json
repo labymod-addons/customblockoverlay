@@ -1,1 +1,22 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "CustomBlockOverlay",
+            "enabled": {
+                "name": "Включено"
+            },
+            "outlineEnabled": {
+                "name": "Свой цвет выделения"
+            },
+            "outlineColor": {
+                "name": "Цвет выделения"
+            },
+            "overlayEnabled": {
+                "name": "Свой цвет наложения"
+            },
+            "overlayColor": {
+                "name": "Цвет наложения"
+            }
+        }
+    }
+}
