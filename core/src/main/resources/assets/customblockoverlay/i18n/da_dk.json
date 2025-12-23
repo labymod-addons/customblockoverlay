@@ -10,6 +10,12 @@
             },
             "outlineColor": {
                 "name": "Omkredsfarve"
+            },
+            "overlayEnabled": {
+                "name": "Brugerdefineret overlejringsfarve"
+            },
+            "overlayColor": {
+                "name": "Overlay farve"
             }
         }
     }
