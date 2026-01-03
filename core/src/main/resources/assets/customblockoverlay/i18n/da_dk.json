@@ -12,7 +12,7 @@
                 "name": "Omkredsfarve"
             },
             "overlayEnabled": {
-                "name": "Brugerdefineret overlejringsfarve"
+                "name": "Brugerdefineret Overlay-farve"
             },
             "overlayColor": {
                 "name": "Overlay farve"
