@@ -1,1 +1,7 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "تراكب الكتل المخصص"
+        }
+    }
+}
