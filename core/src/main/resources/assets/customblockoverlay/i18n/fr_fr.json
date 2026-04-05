@@ -4,6 +4,12 @@
             "name": "Surtouche de bloc personnalisée",
             "enabled": {
                 "name": "Activé"
+            },
+            "outlineEnabled": {
+                "name": "Couleur de contour personnalisée"
+            },
+            "outlineColor": {
+                "name": "Couleur de contour"
             }
         }
     }
