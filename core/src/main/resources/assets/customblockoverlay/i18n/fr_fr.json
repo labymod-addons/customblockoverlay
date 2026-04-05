@@ -1,1 +1,10 @@
-{}
+{
+    "customblockoverlay": {
+        "settings": {
+            "name": "Surtouche de bloc personnalisée",
+            "enabled": {
+                "name": "Activé"
+            }
+        }
+    }
+}
