@@ -10,6 +10,12 @@
             },
             "outlineColor": {
                 "name": "Couleur de contour"
+            },
+            "overlayEnabled": {
+                "name": "Couleur de la surtouche personnalisée"
+            },
+            "overlayColor": {
+                "name": "Couleur de la surtouche"
             }
         }
     }
