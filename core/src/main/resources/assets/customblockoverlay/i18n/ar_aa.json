@@ -1,7 +1,13 @@
 {
     "customblockoverlay": {
         "settings": {
-            "name": "تراكب الكتل المخصص"
+            "name": "تراكب الكتل المخصص",
+            "enabled": {
+                "name": "مفعّل"
+            },
+            "outlineEnabled": {
+                "name": "لون الإطار المخصّص"
+            }
         }
     }
 }
