@@ -1,7 +1,7 @@
 rootProject.name = "customblockoverlay-addon"
 
 pluginManagement {
-    val labyGradlePluginVersion = "0.3.7"
+    val labyGradlePluginVersion = "0.8.0"
     plugins {
         id("net.labymod.gradle") version (labyGradlePluginVersion)
     }
